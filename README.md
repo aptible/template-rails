@@ -43,14 +43,14 @@ git remote add aptible "$GIT_REMOTE"
 git push aptible main
 ```
 
-6. Create a default endpoint for the `CMD` service using the [aptible endpoints:https:create](https://deploy-docs.aptible.com/docs/cli-endpoints-https-create) CLI command:
+6. Create a default endpoint for the `cmd` service using the [aptible endpoints:https:create](https://deploy-docs.aptible.com/docs/cli-endpoints-https-create) CLI command:
 
 ```shell
 # Substitute $APP_HANDLE with the app name
 aptible endpoints:https:create \
         --app "$APP_HANDLE" \
         --default-domain \
-        "CMD"
+        cmd
 ```
 
 That's it! Your web service will be live on your Endpoint URL as soon as the build finishes.
