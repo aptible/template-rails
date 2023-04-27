@@ -11,3 +11,17 @@ The app in this repo is deployed live [here](https://app-52710.on-aptible.com/).
 
 [Detailed docs](https://www.aptible.com/docs/ruby-quickstart)
 
+## Configuration
+
+The only thing the user needs to do is create and set `PRODUCTION_SECRET_KEY` environment variable during onboarding flow. The below command should generate
+a secret you can use in that step.
+
+```bash
+rails secret
+```
+
+If you already created the app and just want to apply an environment variable, you can use our cli tool:
+
+```bash
+aptible config:set --app "$APP_HANDLE" PRODUCTION_SECRET_KEY="xxx"
+```
