@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ruby:latest
+FROM ruby:4.0
 RUN apt-get update \
  && apt-get -y install build-essential libpq-dev \
  && rm -rf /var/lib/apt/lists/*
